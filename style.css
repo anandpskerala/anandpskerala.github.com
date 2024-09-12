@@ -192,6 +192,16 @@ body {
     padding: 30px 10px;
 }
 
+.half-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 20vh;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+
 .title {
     display: flex;
     flex-direction: row;
@@ -211,6 +221,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    max-width: 700px;
+    margin-bottom: 20px;
 }
 
 .info .profile {
@@ -260,6 +272,154 @@ body {
     height: 60px;
 }
 
+.info-section .head {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-section .sub-head {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.info-section .body {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.info-section .highlight {
+    color: var(--blue);
+}
+.info .project-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 20px;
+    background-color: var(--white);
+}
+
+.info .project-section img {
+    width: 300px;
+    height: 150px;
+}
+
+.info .head {
+    min-width: 318px;
+}
+
+.info .link-to {
+    padding: 10px 20px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-section .social-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-section .social-row a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 10px;
+    color: var(--white);
+    background-color: var(--black);
+    font-size: 12px;
+}
+
+.social-section .social-row a svg {
+    fill: var(--hover-white);
+    width: 25px;
+    height: 25px;
+}
+
+
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--blue);
+    justify-content: center;
+    gap: 10px;
+    width: 768px;
+	max-width: 100%;
+    min-width:370px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-section .contact-form {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    height:80%;
+    text-align:center;
+    background-color: var(--hover-white);
+    padding: 10px 20px;
+}
+
+.contact-section .contact-form h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contact-section .contact-form p {
+    font-size: 10px;
+    text-align: left;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.contact-section .left-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 20px;
+    color: var(--white);
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+textarea {
+    display: flex;
+	background-color: var(--white);
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 5px;
+	width: 100%;
+    font-size:0.8rem;
+}
+
+input[type=submit] {
+    margin: 8px 5px;
+	width: 100%;
+    font-size:0.8rem;
+    padding: 12px 15px;
+    color: var(--white);
+    background-color: var(--black);
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -271,17 +431,53 @@ body {
         display: flex;
     }
 
+    .section-1 {
+        min-height: 60vh;
+    }
+
+    .section-1 .background {
+        min-height: 60vh;
+    }
+
+    .section-1 .text-section {
+        min-height: 30vh;
+        min-width: 80%;
+    }
+
+    .main-section {
+        min-height: 0vh;
+    }
+
+    .half-section {
+        min-height: 0vh;
+    }
+
     .info {
         flex-direction: column;
+        max-width: none;
+        min-width: 100%;
     }
 
     .info .info-section {
         align-items: center;
+        text-align: center;
     }
 
     .info .skill-section {
         grid-template-columns: repeat(2, 1fr);
         min-width: 500px;
+    }
+
+    .contact-section .left-side {
+        display: none;
+    }
+
+    .contact-section .contact-form {
+        width: 100%;
+    }
+
+    .contact-section .contact-form h2 {
+        display: none;
     }
 }
 
