@@ -79,7 +79,7 @@
 
     <section class="section-1" id="home">
         <div class="background">
-            <img src="./assets/bg.jpg" alt="background" srcset="./assets/bg.jpg">
+            <img loading="eager" src="./assets/bg.jpg" alt="background" srcset="./assets/bg.jpg">
         </div>
         <div class="text-section">
             <span class="text-row"><h2>Hi&nbsp;</h2><img loading="lazy" src="./assets/hello.webp" width="30px" height="35px"><h2>, I am Anand PS</h2></span>
@@ -229,11 +229,11 @@
                 <h2>Contact</h2>
                 <p>* Required</p>
 
-                <input name="name" type="text" placeholder="Name *"  required/>
-                <input name="email" type="email" placeholder="Email *" required/>
-			    <input name="company" type="text" placeholder="Company" />
-			    <input name="phone" type="phone" placeholder="Phone" />
-                <textarea name="message" rows="4" placeholder="Message *" required></textarea>
+                <input id="name" name="name" type="text" placeholder="Name *"  required/>
+                <input id="email" name="email" type="email" placeholder="Email *" required/>
+			    <input id="company" name="company" type="text" placeholder="Company" />
+			    <input id="phone" name="phone" type="phone" placeholder="Phone" />
+                <textarea id="message" name="message" rows="4" placeholder="Message *" required></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -245,23 +245,6 @@
           strings: ['am a <b>Frontend Developer</b>','am currently learning <b>MERN Stack</b>',  'was a <b>BBA</b> Student'],
           typeSpeed: 60,
           loop: true
-        });
-
-        $("#contact-form").submit((e) => {
-            console.log("trur")
-            e.preventDefault();
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbwHopK8dXMuZ2rMjLO-qBwCq-FZCFc6ov_FLKNXnRPZ2rFSJ-rQ1loCbHAVBLxjhmqi/exec",
-                method: "post",
-                data: $("#contact-form").serialize(),
-                success: function(response) {
-                    alert("Sucessfully submitted form.");
-                    window.location.reload();
-                },
-                error: function(err) {
-                    alert("Something wen wrong");
-                }
-            });
         });
       </script>
 </body>
